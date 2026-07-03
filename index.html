@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Difference between two dates</h1>
+    <p>Enter two different dates</p>
+    <form action="/calculate" method="POST">
+        <label>Date 1</label>
+        <input type="number" name="d1" placeholder="ex-1" required><br>
+        <label>Month 1</label>
+        <input type="number" name="m1" placeholder="ex-1" required><br>
+        <label>Year 1</label>
+        <input type="number" name="y1" placeholder="ex-2026" required><br>
+        <label>Date 2</label>
+        <input type="number" name="d2" placeholder="ex-1" required><br>
+        <label>Month 2</label>
+        <input type="number" name="m2" placeholder="ex-1" required><br>
+        <label>Year 2</label>
+        <input type="number" name="y2" placeholder="ex-2026" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if difference %}
+    <div class="result">
+        <p>Difference between dates: {{ difference}} days</p>
+    </div>
+    {% endif %}
+</body>
+</html>
